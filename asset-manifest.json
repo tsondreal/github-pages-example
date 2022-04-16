@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.8b935588.css",
-    "main.js": "/static/js/main.fac973da.js",
-    "static/js/787.af05cbed.chunk.js": "/static/js/787.af05cbed.chunk.js",
-    "static/media/gettechlogoicon.svg": "/static/media/gettechlogoicon.f1109d3d11c408af87a5742ffb7b17a5.svg",
-    "index.html": "/index.html",
-    "main.8b935588.css.map": "/static/css/main.8b935588.css.map",
-    "main.fac973da.js.map": "/static/js/main.fac973da.js.map",
-    "787.af05cbed.chunk.js.map": "/static/js/787.af05cbed.chunk.js.map"
+    "main.css": "/github-pages-example/static/css/main.8b935588.css",
+    "main.js": "/github-pages-example/static/js/main.97d85a0b.js",
+    "static/js/787.af05cbed.chunk.js": "/github-pages-example/static/js/787.af05cbed.chunk.js",
+    "static/media/gettechlogoicon.svg": "/github-pages-example/static/media/gettechlogoicon.f1109d3d11c408af87a5742ffb7b17a5.svg",
+    "index.html": "/github-pages-example/index.html",
+    "main.8b935588.css.map": "/github-pages-example/static/css/main.8b935588.css.map",
+    "main.97d85a0b.js.map": "/github-pages-example/static/js/main.97d85a0b.js.map",
+    "787.af05cbed.chunk.js.map": "/github-pages-example/static/js/787.af05cbed.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8b935588.css",
-    "static/js/main.fac973da.js"
+    "static/js/main.97d85a0b.js"
   ]
 }
