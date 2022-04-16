@@ -3,8 +3,15 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 160px;
   pointer-events: none;
+  width: 160px;
+}
+
+.App-menu-logo {
+  height: 30px;
+  pointer-events: none;
+  width: 30px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -28,11 +35,26 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a:hover {
+  cursor:pointer;
+ }
+ 
+.maindoc1left {
+  flex: 10;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  overflow: scroll;
+  padding-right: 14px;
+  border-right-color: rgb(240, 240, 240);
+  border-right-width: 1px;
 }
+
+.maindoc1right {
+  
+  height: 100vh;
+  padding-right: 14px;
+  padding-left: 14px;
+}
+
+
+

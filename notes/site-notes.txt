@@ -1,0 +1,16 @@
+
+//This is the Key file for GitHub Pages and React App
+https://www.freecodecamp.org/news/deploy-a-react-app-to-github-pages/
+
+https://stackoverflow.com/questions/61899112/github-pages-and-react-app-not-working-regardless-of-methods
+
+GitHub Pages
+https://medium.com/@svinkle/how-to-deploy-a-react-app-to-a-subdirectory-f694d46427c1
+
+
+
+
+Git Commands
+    git add .
+    git commit -m "something"
+    git push -u origin master

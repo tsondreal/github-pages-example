@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="79px" height="60px" viewBox="0 0 79 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 2</title>
+    <g id="Logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Logo-Options" transform="translate(-1062.000000, -405.000000)">
+            <g id="Group-2" transform="translate(1062.000000, 405.496833)">
+                <rect id="Rectangle-Copy-28" fill="#00C39C" x="40" y="20" width="18" height="18"></rect>
+                <rect id="Rectangle-Copy-29" fill="#00C39C" x="40" y="0" width="18" height="18"></rect>
+                <path d="M61,0 L71.44,0 C75.6152727,-1.65516357e-15 79,3.38472729 79,7.56 L79,18 L79,18 L61,18 L61,0 Z" id="Rectangle-Copy-30" fill="#00C39C"></path>
+                <polygon id="Rectangle-Copy-30" fill="#CCF3EC" points="61 0 79 0 79 18"></polygon>
+                <rect id="Rectangle-Copy-31" fill="#00C39C" x="40" y="41" width="18" height="18"></rect>
+                <path d="M0,20 L18,20 L18,38 L7.56,38 C3.38472729,38 -3.76854984e-16,34.6152727 0,30.44 L0,20 L0,20 Z" id="Rectangle-Copy-21" fill="#45BCE5" opacity="0.646387736"></path>
+                <rect id="Rectangle-Copy-22" fill="#45BCE5" opacity="0.401530675" x="20" y="20" width="18" height="18"></rect>
+                <path d="M7.56,0 L18,0 L18,0 L18,18 L0,18 L0,7.56 C-1.39950186e-15,3.38472729 3.38472729,-1.21193266e-16 7.56,0 Z" id="Rectangle-Copy-23" fill="#45BCE5"></path>
+                <rect id="Rectangle-Copy-33" fill="#00C39C" x="20" y="0" width="18" height="18"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

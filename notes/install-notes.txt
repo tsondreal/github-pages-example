@@ -1,0 +1,26 @@
+//Typescript
+https://create-react-app.dev/docs/adding-typescript/
+npm install --save typescript @types/node @types/react @types/react-dom @types/jest
+
+//Tailwind
+https://tailwindcss.com/docs/guides/create-react-app
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+//React Router
+https://reactrouter.com/docs/en/v6/getting-started/installation
+npm install react-router-dom@6
+
+//heroicons
+https://github.com/tailwindlabs/heroicons
+npm install @heroicons/react
+
+//MUI components
+https://mui.com/core/
+npm install @mui/material @emotion/react @emotion/styled
+npm install @mui/lab
+
+
+//VSCode Extensions
+Prettify JSON
