@@ -30,7 +30,7 @@ export default function OnThisPage(props: IOnThisPage) {
 
 
   return (
-        <div className="py-4 overflow-y-auto hidden md:block">
+        <div className="py-6 overflow-y-auto hidden md:block">
         <h5 className="text-slate-900 font-semibold mb-4 text-sm leading-6 dark:text-slate-100">On this page</h5>
         <ul className="text-slate-700 text-sm leading-6">
             {

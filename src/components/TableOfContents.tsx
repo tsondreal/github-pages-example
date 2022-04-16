@@ -31,13 +31,12 @@ export default function TableOfContents() {
             }
 
   return (
-<div
-    className="hidden md:block pb-10 px-2 py-4 overflow-y-auto">
+<div className="hidden md:block pb-10 px-2 py-2 overflow-y-auto">
     <nav id="nav" className="text-sm leading-6 relative">
 
         <ul>
             
-            <li className="mt-12 lg:mt-8">          
+            <li className="mt-4 lg:mt-4">          
             <a id="start" onClick={ tocClick } className="group flex items-center lg:text-sm lg:leading-6 mb-4 font-medium text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300">
                     <div className="mr-4 rounded-md ring-1 ring-slate-900/5 shadow-sm group-hover:shadow group-hover:ring-slate-900/10 dark:ring-0 dark:shadow-none dark:group-hover:shadow-none dark:group-hover:highlight-white/10 group-hover:shadow-indigo-200 dark:group-hover:bg-indigo-500 dark:bg-slate-800 dark:highlight-white/5">
                         <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">

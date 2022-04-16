@@ -13,9 +13,8 @@ export default function ServiceGuide() {
     <div className="flex">
         <div className="basis-10/12">
 
-            <Box sx={{ my: 3}}>
+            <Box sx={{ my: 2}}>
                 <div className="maindoc1left" >
-                    <Toolbar id="back-to-top-anchor" />
                     <ServiceGuideDoc/>
                 </div>
             </Box>
@@ -24,9 +23,9 @@ export default function ServiceGuide() {
 
         <div className="basis-2/12">
 
-            <Box sx={{ my: 3}}>
+            <Box sx={{ my: 2}}>
                 <div className="maindoc1right">
-                    <Toolbar id="back-to-top-anchor" />
+                    
                     <OnThisPage resourceName={OnThisPageConstants.SERVICE_GUIDE}/>
                 </div>
             </Box>
@@ -37,3 +36,7 @@ export default function ServiceGuide() {
 
     );
 }
+
+/*
+<Toolbar id="back-to-top-anchor" />
+*/

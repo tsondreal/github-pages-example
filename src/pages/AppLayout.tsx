@@ -5,6 +5,7 @@ import Toolbar from '@mui/material/Toolbar';
 
 import TableOfContents from '../components/TableOfContents';
 import MainAppBar from '../components/MainAppBar';
+import LightMenuBar from '../components/LightMenuBar';
 
 
 function AppLayout() {
@@ -12,7 +13,7 @@ function AppLayout() {
 
     <div >
       <section>    
-        <MainAppBar/>
+        <LightMenuBar/>
       </section>  
 
       <section >
@@ -20,9 +21,9 @@ function AppLayout() {
 
           <div className="basis-3/12">
 
-            <Box sx={{ my: 3}}>
+            <Box sx={{ my: 2}}>
               <div className="maindoc1right">
-                <Toolbar id="back-to-top-anchor" />
+                
                 <TableOfContents/>
               </div>
             </Box>

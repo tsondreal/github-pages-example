@@ -1,13 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
 import AppLayout from './pages/AppLayout';
-import TableOfContents from './components/TableOfContents';
-import MainAppBar from './components/MainAppBar';
-
-import * as OnThisPageConstants from './components/OnThisPageConstants'
 
 
 //First level
