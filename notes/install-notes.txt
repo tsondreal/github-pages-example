@@ -20,7 +20,11 @@ npm install @heroicons/react
 https://mui.com/core/
 npm install @mui/material @emotion/react @emotion/styled
 npm install @mui/lab
+npm install @mui/icons-material
 
+//lodash
+npm i --save lodash
+npm install --save @types/lodash
 
 //VSCode Extensions
 Prettify JSON
