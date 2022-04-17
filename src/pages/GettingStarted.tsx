@@ -1,6 +1,5 @@
 import '../App.css';
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
 
 import OnThisPage from '../components/OnThisPage';
 import * as OnThisPageConstants from '../components/OnThisPageConstants'
@@ -8,9 +7,7 @@ import GettingStartedDoc from '../docs/GettingStartedDoc';
 
 
 export default function GettingStarted() {
-
-    console.log("Getting Started");
-
+    document.title = "Get Started"
   return (
 
     <div className="flex">
