@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" version="1.1" viewBox="0 0 224 291" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(-2.1822 -3)">
+        <g transform="translate(-1.2178 1)">
+                    <rect x="143.4" y="6" width="80" height="80" fill="#fff"/>
+                    <path d="m171.4 90h-32v-88h88v88h-32v-8h24v-72h-72v72h24v8z" fill="#68bae1" fill-rule="nonzero"/>
+                    <rect x="143.4" y="142" width="80" height="80" fill="#fff"/>
+                    <path d="m139.4 170v-32h88v88h-88v-32h8v24h72v-72h-72v24h-8z" fill="#11329a" fill-rule="nonzero"/>
+                    <rect x="179.4" y="58" width="8" height="84" fill="#11329a" fill-rule="nonzero"/>
+                    <path d="m163.4 46c0-11.2 8.8-20 20-20s20 8.8 20 20-8.8 20-20 20-20-8.8-20-20zm32 0c0-6.4-5.6-12-12-12s-12 5.6-12 12 5.6 12 12 12 12-5.6 12-12z" fill="#11329a" fill-rule="nonzero"/>
+                    <rect x="7.4" y="142" width="80" height="80" fill="#fff"/>
+                    <path d="m59.4 138h32v88h-88v-88h32v8h-24v72h72v-72h-24v-8z" fill="#68bae1" fill-rule="nonzero"/>
+                    <rect x="87.4" y="178" width="84" height="8" fill="#68bae1" fill-rule="nonzero"/>
+                    <path d="m183.4 162c11.2 0 20 8.8 20 20s-8.8 20-20 20-20-8.8-20-20 8.8-20 20-20zm0 32c6.4 0 12-5.6 12-12s-5.6-12-12-12-12 5.6-12 12 5.6 12 12 12z" fill="#68bae1" fill-rule="nonzero"/>
+                    <rect x="7.4" y="6" width="80" height="80" fill="#fff"/>
+                    <path d="m91.4 58v32h-88v-88h88v32h-8v-24h-72v72h72v-24h8z" fill="#11329a" fill-rule="nonzero"/>
+                    <rect x="43.4" y="86" width="8" height="84" fill="#11329a" fill-rule="nonzero"/>
+                    <path d="m67.4 182c0 11.2-8.8 20-20 20s-20-8.8-20-20 8.8-20 20-20 20 8.8 20 20zm-32 0c0 6.4 5.6 12 12 12s12-5.6 12-12-5.6-12-12-12-12 5.6-12 12z" fill="#11329a" fill-rule="nonzero"/>
+                <rect x="59.4" y="42" width="84" height="8" fill="#68bae1" fill-rule="nonzero"/>
+                <path d="m47.4 66c-11.2 0-20-8.8-20-20s8.8-20 20-20 20 8.8 20 20-8.8 20-20 20zm0-32c-6.4 0-12 5.6-12 12s5.6 12 12 12 12-5.6 12-12-5.6-12-12-12z" fill="#68bae1" fill-rule="nonzero"/>
+        </g>
+        <g transform="translate(-1.2178 1)">
+            <g transform="matrix(1.4927 -.0010459 .00070064 1 .948 291.73)">
+                <text fill="rgb(17,50,154)" font-family="'SFProRounded-Regular', 'SF Pro Rounded'" font-size="72px">AICS</text>
+            </g>
+        </g>
+    </g>
+</svg>

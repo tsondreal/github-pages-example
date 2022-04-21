@@ -1,16 +1,15 @@
 import * as React from 'react';
 
-export default function TSA() {
-
-    console.log("TSA");
+export default function AppRatDoc() {
+    console.log("App Rat");
   return (
 
     <div>
 
         <div id="content-wrapper" className="relative z-10 prose prose-slate mb-16 max-w-3xl dark:prose-dark">
-            <h3 className="sr-only">TSA</h3>
+            <h3 className="sr-only">App Rat</h3>
             <p>
-                TSA...
+                Application Rationalization...
             </p>
         </div>
         <div className="hidden sm:block absolute top-0 left-[15%] pt-[40%] 2xl:left-[40%] 2xl:pt-[8%] dark:hidden"><img
@@ -185,7 +184,5 @@ export default function TSA() {
         </ol>
     </div>
 
-
     );
 }
-

@@ -34,3 +34,47 @@ export const P2A = [
 
     }        
 ]
+
+export const GETSTARTED = [
+    {
+        level1: 'Get Started',
+            href: '#get-started',
+        level2arr: [
+
+        ],
+        id: '1'
+
+    },    
+    {
+        level1: 'Required Conditions',
+            href: '#conditions',
+        level2arr: [
+            {
+                level2: 'Application Portfolio Management',
+                href: '#start/apprat',
+                tabid: 'start/apprat',
+                id: '2.1'        
+            },
+            {
+                level2: 'TSA, TSDD, External Data',
+                href: '#start/tsa',
+                tabid: 'start/tsa',
+                id: '2.2'        
+            },
+            {
+                level2: 'Privacy and Compliance',
+                href: '#get-started',
+                tabid: '#',
+                id: '2.3'        
+            },
+            {
+                level2: 'Information Security',
+                href: '#get-started',
+                tabid: 'start/apprat',
+                id: '2.4'        
+            }            
+        ],
+        id: '2'
+
+    },       
+]

@@ -39,22 +39,18 @@ a:hover {
   cursor:pointer;
  }
  
-.maindoc1left {
-  flex: 10;
-  height: 100vh;
+.maindoc {
   background-color: rgb(255, 255, 255);
-  overflow: scroll;
-  padding-right: 14px;
   border-right-color: rgb(240, 240, 240);
   border-right-width: 1px;
 }
 
-.maindoc1right {
+.maintoc {
   
-  height: 100vh;
-  padding-right: 14px;
-  padding-left: 14px;
 }
 
+.mainonthispage {
+  
+}
 
 

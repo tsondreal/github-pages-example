@@ -1,13 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
-
-
-const tabs = [
-    { name: 'Target State Architecture (TSA)', href: `${process.env.PUBLIC_URL}/GettingStarted/TSA`, current: true },
-    { name: 'Application Rationalization', href: `${process.env.PUBLIC_URL}/GettingStarted/AppRat`, current: false },
-    { name: 'Asset Risk Profile', href: '#', current: false },
-    { name: 'SaaS', href: '#', current: false },
-]
+import { useCustomEventListener } from 'react-custom-events';
 
 export default function GettingStartedDoc() {
 
@@ -16,50 +9,59 @@ export default function GettingStartedDoc() {
 
 
     const tabClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-        
-        console.log("tabClick");
+        //console.log("GettingStartedDoc - tabClick - " + event.currentTarget.id);
         console.log(event.currentTarget.id)
         setCurrentTab(event.currentTarget.id)
         navigate(event.currentTarget.id)
-        //event.preventDefault();
     }
 
-    console.log("Getting Started Doc");
+    useCustomEventListener('on-this-page-tab-event', data => {
+        //let targetID:string;
+        let targetID:any = data;
+        console.log("GettingStartedDoc - useCustomEventListener - " + data);
+        setCurrentTab(targetID)
+        navigate(targetID)
+    });
+
+    //console.log("Getting Started Doc");
   return (
 
 
-<main className="max-w-3xl mx-auto relative z-20 pt-4 xl:max-w-none">
+<main className="max-w-3xl mx-auto pt-8 xl:max-w-none pr-6 pl-4 overflow-scroll w-full">
     <header id="header" className="mb-10 md:flex md:items-start">
         <div className="flex-auto max-w-4xl">
 
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight dark:text-slate-200">
-                Begin Here for GetTech 
+            <h1 id="get-started" className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight dark:text-slate-200">
+                Get Started
             </h1>
             <p className="mt-4 text-lg text-slate-700 dark:text-slate-400">
-                GetTech is a governance process to ensure that the software we purchase or acquire meets Enterprise Architecture
-                standards, as well as adhere to Information Security, Privacy, and Compliance policies. This section will explain
-                what requirements have to be met to gain approval.
+                When looking to purchase or acquire a new software solution, or renew a contract on existing software, your
+                solution is required to meet the conditions outlined below. Please be aware that based on the classification of the
+                software solution, the conditions may vary.
             </p>
-            <p className="mt-4 text-lg text-slate-700 dark:text-slate-400">
-                Outcome: You will understand what you need to do in order to obtain approval for your software solution.
-            </p>
+
         </div>
     </header>
-    <section className="mb-16 relative">
+    <div className="mb-16">
         <div className="relative z-10">
-            <h2 data-docsearch-ignore="true" className="text-slate-900 text-xl tracking-tight font-bold mb-3 dark:text-slate-200">
-                Pre-Requisites
+            <h2 data-docsearch-ignore="true" id="conditions" className="text-slate-900 text-xl tracking-tight font-bold mb-3 dark:text-slate-200">
+                Required Conditions
             </h2>
-            <p className="mt-4 mb-4 text-lg text-slate-700 dark:text-slate-400">
-                The following are conditions that must to be met prior to engaging in the GetTech process:
-            </p>            
-            <div className="flex overflow-auto mb-6 -mx-4 sm:-mx-6">
+            <ul className="list-disc list-inside mt-4 text-slate-700 dark:text-slate-400 marker:text-slate-500">
+                    <li>Application Portfolio Management (APM) practices</li>
+                    <li>TSA and TSDD principles and standards</li>
+                    <li>External Data standards</li>
+                    <li>Privacy and compliance standards</li>
+                    <li>Information security standards</li>
+            </ul>   
+
+            <div className="flex overflow-auto mb-6 mt-6 -mx-4 sm:-mx-6">
                 <div className="flex-none min-w-full px-4 sm:px-6">
                     <ul className="border-b border-slate-200 space-x-6 flex whitespace-nowrap dark:border-slate-200/5">
                         <li>
                             <h2>
-                                <a className = {currentTab === "tsa" ? "flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-sky-500 border-current" : "flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-slate-900 border-transparent hover:border-slate-300 dark:text-slate-200 dark:hover:border-slate-700"} 
-                                    id="tsa"
+                                <a className = {currentTab === "start/tsa" ? "flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-sky-500 border-current" : "flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-slate-900 border-transparent hover:border-slate-300 dark:text-slate-200 dark:hover:border-slate-700"} 
+                                    id="start/tsa"
                                     onClick={ tabClick }
                                     >
                                     Target State Architecture (TSA)
@@ -68,8 +70,8 @@ export default function GettingStartedDoc() {
                         </li>
                         <li>
                             <h2>
-                            <a className = {currentTab === "apprat" ? "flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-sky-500 border-current" : "flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-slate-900 border-transparent hover:border-slate-300 dark:text-slate-200 dark:hover:border-slate-700"} 
-                                    id="apprat"
+                            <a className = {currentTab === "start/apprat" ? "flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-sky-500 border-current" : "flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-slate-900 border-transparent hover:border-slate-300 dark:text-slate-200 dark:hover:border-slate-700"} 
+                                    id="start/apprat"
                                     onClick={ tabClick }
                                     >Application Rationalization
                                 </a>
@@ -99,12 +101,12 @@ export default function GettingStartedDoc() {
             </div>
         </div>
 
-        <section>
+        <div className="">
             <Outlet />
-        </section>
+        </div>
 
-    </section>
-    <section className="relative">
+    </div>
+    <div className="">
         <h2 className="text-slate-900 text-xl tracking-tight font-bold mb-3 dark:text-slate-200">What to read next</h2>
         <div className="mb-10 max-w-2xl prose prose-slate xl:mb-0 dark:prose-dark">
             <p>Get familiar with some of the core concepts that make Tailwind CSS different from writing traditional
@@ -161,14 +163,12 @@ export default function GettingStartedDoc() {
                             modifiers.</p>
                     </div>
                 </div>
-                <div
-                    className="absolute -z-10 -inset-3 rounded-2xl bg-slate-50 dark:bg-slate-800/50 opacity-0 peer-hover:opacity-100 sm:-inset-4">
-                </div>
+
             </li>
 
 
         </ul>
-    </section>
+    </div>
 </main>
 
     );
@@ -176,8 +176,8 @@ export default function GettingStartedDoc() {
 
 /*
 
-            <p className="mb-4 text-sm leading-6 font-semibold text-sky-500 dark:text-sky-400">
-                Getting Started
-            </p>
+                <div
+                    className="absolute -z-10 -inset-3 rounded-2xl bg-slate-50 dark:bg-slate-800/50 opacity-0 peer-hover:opacity-100 sm:-inset-4">
+                </div>
 
 */

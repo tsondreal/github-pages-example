@@ -4,30 +4,29 @@ import Box from '@mui/material/Box';
 import OnThisPage from '../components/OnThisPage';
 import * as OnThisPageConstants from '../components/OnThisPageConstants'
 import GettingStartedDoc from '../docs/GettingStartedDoc';
+import LightFooter from '../components/LightFooter'
 
 
 export default function GettingStarted() {
     document.title = "Get Started"
+    
   return (
 
-    <div className="flex">
-        <div className="basis-10/12">
-
-            <Box sx={{ my: 2}}>
-                <div className="maindoc1left" >
-                    <GettingStartedDoc />
-                </div>
-            </Box>
-
+    <div className="flex flex-row overflow-hidden">
+        <div className="w-4/5 ">
+           
+            <div className="maindoc flex flex-col h-screen" >
+                <GettingStartedDoc />
+                <LightFooter />
+            </div>
+            
         </div>
 
-        <div className="basis-2/12">
+        <div className="w-1/5">
 
-            <Box sx={{ my: 2}}>
-                <div className="maindoc1right">
-                    <OnThisPage resourceName={OnThisPageConstants.GETTING_STARTED}/>
-                </div>
-            </Box>
+            <div className="mainonthispage">
+                <OnThisPage resourceName={OnThisPageConstants.GETTING_STARTED}/>
+            </div>
 
         </div> 
 

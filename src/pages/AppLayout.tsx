@@ -1,45 +1,38 @@
 import { Outlet } from 'react-router-dom';
 import '../App.css';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
 
 import TableOfContents from '../components/TableOfContents';
-import MainAppBar from '../components/MainAppBar';
 import LightMenuBar from '../components/LightMenuBar';
 
 
 function AppLayout() {
   return (
 
-    <div >
-      <section>    
-        <LightMenuBar/>
-      </section>  
+    <div id="app-layout" className="h-screen flex flex-col overflow-hidden">
 
-      <section >
-        <div className="flex">
+        <div id="menu-bar" className="flex flex-none items-center justify-between flex-wrap">
+          <LightMenuBar/>
+        </div>
 
-          <div className="basis-3/12">
+        <div className="flex-row flex overflow-hidden">
 
-            <Box sx={{ my: 2}}>
-              <div className="maindoc1right">
-                
+          <div className="w-1/5">
+            
+              <div className="maintoc">
                 <TableOfContents/>
               </div>
-            </Box>
-
+            
           </div>
 
-          <div className="basis-9/12">
+          <div className="w-4/5">
 
-            <div>      
+            <div className="">      
                 <Outlet />
             </div>
 
           </div>
 
         </div>
-      </section>
       
       {/*  Site footer */}
 
@@ -50,5 +43,39 @@ function AppLayout() {
 
 export default AppLayout;
 
+/*
+    <div >
+ 
 
+      <section >
+
+        <div id="menu-bar" className="sticky top-0 z-50">
+          <LightMenuBar/>
+        </div>
+
+        <div className="flex flex-row">
+
+          <div className="w-1/5">
+            
+              <div className="maintoc">
+                <TableOfContents/>
+              </div>
+            
+          </div>
+
+          <div className="w-4/5">
+
+            <div className="">      
+                <Outlet />
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+      
+      {/*  Site footer */ /*}
+
+      </div>
+*/
 
