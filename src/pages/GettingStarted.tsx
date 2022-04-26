@@ -12,12 +12,17 @@ export default function GettingStarted() {
     
   return (
 
-    <div className="flex flex-row overflow-hidden">
-        <div className="w-4/5 ">
+    <div className="flex flex-row  ">
+        <div className="w-4/5 h-full">
            
-            <div className="maindoc flex flex-col h-screen" >
-                <GettingStartedDoc />
-                <LightFooter />
+            <div className="maindoc flex flex-col overflow-scroll " >
+                
+                <div className="h-5/6">
+                    <GettingStartedDoc/>
+                </div>
+                <div className="h-1/6">
+                    <LightFooter />
+                </div>
             </div>
             
         </div>

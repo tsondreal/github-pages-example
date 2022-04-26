@@ -7,12 +7,15 @@ import AppLayout from './pages/AppLayout';
 //First level
 import GettingStarted from './pages/GettingStarted';
 //GettingStarted Second Level
-  import TSADoc from './docs/TSADoc'
-  import AppRatDoc from './docs/AppRatDoc'
-import P2A from './pages/P2A'
+  import TSADoc from './docs/TSADoc';
+  import AppRatDoc from './docs/AppRatDoc';
+  import SWClassVSM from './docs/SWClassVSMDoc';
+import P2A from './pages/P2A';
 
-import ServiceManual from './pages/ServiceManual';
 import ServiceGuide from './pages/ServiceGuide';
+import ServiceManual from './pages/ServiceManual';
+
+import EAOffice from './pages/EAOffice';
 
 
 function App() {
@@ -25,8 +28,9 @@ function App() {
         <Route element={ <AppLayout/>}>
           <Route path="/start" element={ <GettingStarted />} >
               <Route index element={ <TSADoc/>} />
-              <Route path="start/tsa" element={ <TSADoc/>} />
-              <Route path="start/apprat" element={ <AppRatDoc/>} />
+              <Route path="tsa" element={ <TSADoc/>} />
+              <Route path="apprat" element={ <AppRatDoc/>} />
+              <Route path="classvsm" element={ <SWClassVSM/>} />
           </Route>
 
           <Route path="p2a" element={ <P2A/>} />
@@ -34,6 +38,8 @@ function App() {
           <Route path="manual" element={ <ServiceManual/>} />
           
           <Route path="guide" element={ <ServiceGuide/>} />
+
+          <Route path="eaoffice" element={ <EAOffice/>} />
 
           <Route path="*" element={<Navigate to="/start" replace />} />
 
@@ -49,25 +55,3 @@ export default App;
 
 
 //{`/${process.env.PUBLIC_URL}`} 
-
-/*
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <Routes >
-        <Route element={ <AppLayout/>}>
-        
-          <Route path="/" element={ <GettingStarted />} >
-              <Route index element={ <TSA/>} />
-              <Route path="tsa" element={ <TSA/>} />
-              <Route path="apprat" element={ <AppRat/>} />
-          </Route>
-
-          <Route path="p2a" element={ <P2A/>} />
-
-          <Route path="manual" element={ <ServiceManual/>} />
-          
-          <Route path="guide" element={ <ServiceGuide/>} />
-
-        </Route>
-      </Routes>
-    </BrowserRouter>`
-*/

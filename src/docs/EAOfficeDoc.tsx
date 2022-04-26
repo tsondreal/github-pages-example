@@ -2,18 +2,17 @@ import React, { useState } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 import { useCustomEventListener } from 'react-custom-events';
 
-export default function GettingStartedDoc() {
+export default function EAOfficeDoc() {
 
     const navigate = useNavigate();
-    const [currentTab, setCurrentTab] = useState("tsa");
+    const [currentTab, setCurrentTab] = useState("start/tsa");
 
 
     const tabClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-        //console.log("GettingStartedDoc - tabClick 1.0 - " + event.currentTarget.id);
-        setCurrentTab(event.currentTarget.id);
-        let navid: string = event.currentTarget.id;
-        //console.log("GettingStartedDoc - tabClick 1.1 - navid - " + navid);
-        navigate(navid);
+        //console.log("GettingStartedDoc - tabClick - " + event.currentTarget.id);
+        console.log(event.currentTarget.id)
+        setCurrentTab(event.currentTarget.id)
+        navigate(event.currentTarget.id)
     }
 
     useCustomEventListener('on-this-page-tab-event', data => {
@@ -32,7 +31,7 @@ export default function GettingStartedDoc() {
         <div className="flex-auto max-w-4xl">
 
             <h1 id="get-started" className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight dark:text-slate-200">
-                Get Started
+                EA Office
             </h1>
             <p className="mt-4 text-lg text-slate-700 dark:text-slate-400">
                 When looking to purchase or acquire a new software solution, or renew a contract on existing software, your
@@ -61,8 +60,8 @@ export default function GettingStartedDoc() {
                     <ul className="border-b border-slate-200 space-x-6 flex whitespace-nowrap dark:border-slate-200/5">
                         <li>
                             <h2>
-                                <a className = {currentTab === "tsa" ? "flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-sky-500 border-current" : "flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-slate-900 border-transparent hover:border-slate-300 dark:text-slate-200 dark:hover:border-slate-700"} 
-                                    id="tsa"
+                                <a className = {currentTab === "start/tsa" ? "flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-sky-500 border-current" : "flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-slate-900 border-transparent hover:border-slate-300 dark:text-slate-200 dark:hover:border-slate-700"} 
+                                    id="start/tsa"
                                     onClick={ tabClick }
                                     >
                                     Target State Architecture (TSA)
@@ -71,8 +70,8 @@ export default function GettingStartedDoc() {
                         </li>
                         <li>
                             <h2>
-                            <a className = {currentTab === "apprat" ? "flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-sky-500 border-current" : "flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-slate-900 border-transparent hover:border-slate-300 dark:text-slate-200 dark:hover:border-slate-700"} 
-                                    id="apprat"
+                            <a className = {currentTab === "start/apprat" ? "flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-sky-500 border-current" : "flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-slate-900 border-transparent hover:border-slate-300 dark:text-slate-200 dark:hover:border-slate-700"} 
+                                    id="start/apprat"
                                     onClick={ tabClick }
                                     >Application Rationalization
                                 </a>
@@ -102,7 +101,7 @@ export default function GettingStartedDoc() {
             </div>
         </div>
 
-        <div className="scroll-smooth">
+        <div className="">
             <Outlet />
         </div>
 

@@ -8,13 +8,13 @@ import LightMenuBar from '../components/LightMenuBar';
 function AppLayout() {
   return (
 
-    <div id="app-layout" className="h-screen flex flex-col overflow-hidden">
+    <div id="app-layout" className="h-screen flex flex-col">
 
-        <div id="menu-bar" className="flex flex-none items-center justify-between flex-wrap">
+        <div id="menu-bar" className="sticky top-0 z-50 items-center justify-between flex-wrap">
           <LightMenuBar/>
         </div>
 
-        <div className="flex-row flex overflow-hidden">
+        <div className="flex-row flex ">
 
           <div className="w-1/5">
             
@@ -34,8 +34,6 @@ function AppLayout() {
 
         </div>
       
-      {/*  Site footer */}
-
     </div>
 
   );
@@ -44,16 +42,13 @@ function AppLayout() {
 export default AppLayout;
 
 /*
-    <div >
- 
+    <div id="app-layout" className="h-screen flex flex-col">
 
-      <section >
-
-        <div id="menu-bar" className="sticky top-0 z-50">
+        <div id="menu-bar" className="flex flex-none items-center justify-between flex-wrap">
           <LightMenuBar/>
         </div>
 
-        <div className="flex flex-row">
+        <div className="flex-row flex ">
 
           <div className="w-1/5">
             
@@ -72,10 +67,8 @@ export default AppLayout;
           </div>
 
         </div>
-      </section>
-      
-      {/*  Site footer */ /*}
 
       </div>
 */
+
 
