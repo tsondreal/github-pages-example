@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/github-pages-example/static/css/main.341d214f.css",
-    "main.js": "/github-pages-example/static/js/main.8d2bc57b.js",
+    "main.css": "/github-pages-example/static/css/main.21b4fa4a.css",
+    "main.js": "/github-pages-example/static/js/main.0bba0794.js",
     "static/js/787.af05cbed.chunk.js": "/github-pages-example/static/js/787.af05cbed.chunk.js",
+    "static/media/aics_logo_plain.svg": "/github-pages-example/static/media/aics_logo_plain.1d0f41a3b5fcf7b22cbf056079087d6e.svg",
     "static/media/gettechlogoicon.svg": "/github-pages-example/static/media/gettechlogoicon.f1109d3d11c408af87a5742ffb7b17a5.svg",
     "index.html": "/github-pages-example/index.html",
-    "main.341d214f.css.map": "/github-pages-example/static/css/main.341d214f.css.map",
-    "main.8d2bc57b.js.map": "/github-pages-example/static/js/main.8d2bc57b.js.map",
+    "main.21b4fa4a.css.map": "/github-pages-example/static/css/main.21b4fa4a.css.map",
+    "main.0bba0794.js.map": "/github-pages-example/static/js/main.0bba0794.js.map",
     "787.af05cbed.chunk.js.map": "/github-pages-example/static/js/787.af05cbed.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.341d214f.css",
-    "static/js/main.8d2bc57b.js"
+    "static/css/main.21b4fa4a.css",
+    "static/js/main.0bba0794.js"
   ]
 }
