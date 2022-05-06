@@ -1,3 +1,5 @@
+import SoftwareClassSurvey from '../components/SoftwareClassSurvey';
+
 export default function TSADoc() {
 
   return (
@@ -7,7 +9,9 @@ export default function TSADoc() {
         <div id="content-wrapper" className="relative z-10 prose prose-slate mb-16 max-w-3xl dark:prose-dark">
             <h3 className="sr-only">TSA</h3>
             <p>
-                TSA...
+               <div>
+                <SoftwareClassSurvey/>
+                </div>
             </p>
         </div>
         <div className="hidden sm:block absolute top-0 left-[15%] pt-[40%] 2xl:left-[40%] 2xl:pt-[8%] dark:hidden"><img

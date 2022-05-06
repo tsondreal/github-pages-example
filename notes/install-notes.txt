@@ -24,11 +24,16 @@ npm install @heroicons/react
 npm i react-custom-events
 https://www.npmjs.com/package/react-custom-events
 
+//SurveyJS
+npm install survey-react-ui --save
+https://surveyjs.io/Documentation/Library?id=get-started-react
+
 
 //MUI components
 https://mui.com/core/
 npm install @mui/material @emotion/react @emotion/styled
 npm install @mui/lab
+npm install @mui/icons-material
 
 
 //VSCode Extensions
