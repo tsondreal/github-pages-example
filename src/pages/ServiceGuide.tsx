@@ -1,34 +1,35 @@
 import '../App.css';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-
 import OnThisPage from '../components/OnThisPage';
 import ServiceGuideDoc from '../docs/ServiceGuideDoc';
-import * as OnThisPageConstants from '../components/OnThisPageConstants'
+import * as OnThisPageConstants from '../components/OnThisPageConstants';
+import LightFooter from '../components/LightFooter';
+
 
 export default function ServiceGuide() {
-
+    document.title = "Service Guide"
+    
   return (
 
-    <div className="flex">
-        <div className="basis-10/12">
-
-            <Box sx={{ my: 2}}>
-                <div className="maindoc1left" >
+    <div className="flex flex-row  ">
+        <div className="w-4/5 h-full">
+           
+            <div className="maindoc flex flex-col overflow-scroll " >
+                
+                <div className="h-5/6">
                     <ServiceGuideDoc/>
                 </div>
-            </Box>
-
+                <div className="h-1/6">
+                    <LightFooter />
+                </div>
+            </div>
+            
         </div>
 
-        <div className="basis-2/12">
+        <div className="w-1/5">
 
-            <Box sx={{ my: 2}}>
-                <div className="maindoc1right">
-                    
-                    <OnThisPage resourceName={OnThisPageConstants.SERVICE_GUIDE}/>
-                </div>
-            </Box>
+            <div className="mainonthispage">
+                <OnThisPage resourceName={OnThisPageConstants.SERVICE_GUIDE}/>
+            </div>
 
         </div> 
 
@@ -36,7 +37,3 @@ export default function ServiceGuide() {
 
     );
 }
-
-/*
-<Toolbar id="back-to-top-anchor" />
-*/

@@ -122,3 +122,55 @@ export const EAOFFICE = [
 
     },       
 ]
+
+export const SOFTWARETYPETOOL = [
+    {
+        level1: 'Software',
+            href: '#get-started',
+        level2arr: [
+
+        ],
+        id: '1'
+
+    },    
+    {
+        level1: 'Some Level 2',
+            href: '#conditions',
+        level2arr: [
+            {
+                level2: 'solution_or_component',
+                href: '#apprat',
+                tabid: 'apprat',
+                id: '2.1'        
+            },          
+        ],
+        id: '2'
+
+    },       
+]
+
+export const SOFTWARETAXONOMY = [
+    {
+        level1: 'Software',
+            href: '#get-started',
+        level2arr: [
+
+        ],
+        id: '1'
+
+    },    
+    {
+        level1: 'Some Level 2',
+            href: '#conditions',
+        level2arr: [
+            {
+                level2: 'solution_or_component',
+                href: '#apprat',
+                tabid: 'apprat',
+                id: '2.1'        
+            },          
+        ],
+        id: '2'
+
+    },       
+]

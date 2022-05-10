@@ -1,10 +1,8 @@
 import '../App.css';
-import Box from '@mui/material/Box';
-
 import OnThisPage from '../components/OnThisPage';
 import * as OnThisPageConstants from '../components/OnThisPageConstants'
 import GettingStartedDoc from '../docs/GettingStartedDoc';
-import LightFooter from '../components/LightFooter'
+import LightFooter from '../components/LightFooter';
 
 
 export default function GettingStarted() {

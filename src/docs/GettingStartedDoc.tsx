@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 import { useCustomEventListener } from 'react-custom-events';
+import * as CustomEventConstants from '../components/CustomEventConstants';
 
 export default function GettingStartedDoc() {
 
@@ -9,21 +10,18 @@ export default function GettingStartedDoc() {
 
 
     const tabClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-        //console.log("GettingStartedDoc - tabClick 1.0 - " + event.currentTarget.id);
         setCurrentTab(event.currentTarget.id);
         let navid: string = event.currentTarget.id;
-        //console.log("GettingStartedDoc - tabClick 1.1 - navid - " + navid);
         navigate(navid);
     }
 
-    useCustomEventListener('on-this-page-tab-event', data => {
+    useCustomEventListener(CustomEventConstants.ON_THIS_PAGE_TAB_EVENT, data => {
         //console.log("GettingStartedDoc - useCustomEventListener - " + data);
         let targetID:any = data;
         setCurrentTab(targetID)
         navigate(targetID)
     });
 
-    //console.log("Getting Started Doc");
   return (
 
 
@@ -48,9 +46,9 @@ export default function GettingStartedDoc() {
                 Required Conditions
             </h2>
             <ul className="list-disc list-inside mt-4 text-slate-700 dark:text-slate-400 marker:text-slate-500">
-                <li>Software Classification and Value Stream Mapping</li>
+                <li>Architecture alignment - TSA and TSDD principles and standards</li>
+                <li>Software Type and Value Stream Mapping</li>
                 <li>Application Portfolio Management (APM) practices</li>
-                <li>TSA and TSDD principles and standards</li>
                 <li>External Data standards</li>
                 <li>Privacy and compliance standards</li>
                 <li>Information security standards</li>

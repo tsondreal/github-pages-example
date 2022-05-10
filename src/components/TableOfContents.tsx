@@ -23,6 +23,12 @@ export default function TableOfContents() {
                         case "guide":
                                 navigate(tocName);
                                 break;
+                        case "swtypetool":
+                                navigate(tocName);
+                                break;
+                        case "swtype":
+                                navigate(tocName);
+                                break;
                         default:
                                 navigate(tocName);
                                 break;
@@ -59,6 +65,28 @@ export default function TableOfContents() {
                                 href="/docs/using-with-preprocessors">Managing the Lifecycle of Purchased Software</a></li>
                         </ul>
                 </li>
+
+                <li className="mt-12 lg:mt-8">
+
+                <a id="swtypetool" onClick={ tocClick } className="group flex items-center lg:text-sm lg:leading-6 mb-4 font-medium text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300">
+                        <div className="mr-4 rounded-md ring-1 ring-slate-900/5 shadow-sm group-hover:shadow group-hover:ring-slate-900/10 dark:ring-0 dark:shadow-none dark:group-hover:shadow-none dark:group-hover:highlight-white/10 group-hover:shadow-sky-200 dark:group-hover:bg-sky-500 dark:bg-sky-500 dark:highlight-white/10">
+                                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="#3346FF" strokeWidth="1">
+                                <path strokeLinecap="round" strokeLinejoin="round"
+                                
+                                        d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"
+                                        className="fill-red-300 group-hover:fill-red-400 dark:fill-red-300 dark:group-hover:fill-red-500">
+                                </path>
+                                </svg>
+                                </div>
+                                <h5 className="font-semibold text-slate-900 dark:text-slate-200">Software Type Tool</h5>
+                        </a>
+                        <ul className="space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-800">
+                        <li><a className="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
+                                id="swtaxonomy" onClick={ tocClick }>Software Taxonomy</a></li>
+                        </ul>                        
+                </li>
+
+
                 <li className="mt-12 lg:mt-8">
 
                 <a id="manual" onClick={ tocClick } className="group flex items-center lg:text-sm lg:leading-6 mb-4 font-medium text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300">

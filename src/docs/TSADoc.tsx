@@ -1,4 +1,4 @@
-import SoftwareClassSurvey from '../components/SoftwareClassSurvey';
+import SoftwareTypeSurvey from '../components/SoftwareTypeSurvey';
 
 export default function TSADoc() {
 
@@ -8,10 +8,9 @@ export default function TSADoc() {
 
         <div id="content-wrapper" className="relative z-10 prose prose-slate mb-16 min-w-full dark:prose-dark">
             <h3 className="sr-only">TSA</h3>
-            
-               <div>
-                <SoftwareClassSurvey/>
-                </div>
+            <p>
+
+            </p>
         </div>
         <div className="hidden sm:block absolute top-0 left-[15%] pt-[40%] 2xl:left-[40%] 2xl:pt-[8%] dark:hidden"><img
                 src="/_next/static/media/installation.9713bc44d9403301b053edfbc12e7b1c.jpg" alt=""

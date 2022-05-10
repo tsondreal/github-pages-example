@@ -12,6 +12,9 @@ import GettingStarted from './pages/GettingStarted';
   import SWClassVSM from './docs/SWClassVSMDoc';
 import P2A from './pages/P2A';
 
+import SoftwareTypeTool from './pages/SoftwareTypeTool';
+import SoftwareTaxonomy from './pages/SoftwareTaxonomy';
+
 import ServiceGuide from './pages/ServiceGuide';
 import ServiceManual from './pages/ServiceManual';
 
@@ -34,6 +37,9 @@ function App() {
           </Route>
 
           <Route path="p2a" element={ <P2A/>} />
+
+          <Route path="swtypetool" element={ <SoftwareTypeTool/>} />
+          <Route path="swtaxonomy" element={ <SoftwareTaxonomy/>} />
 
           <Route path="manual" element={ <ServiceManual/>} />
           

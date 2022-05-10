@@ -7,7 +7,7 @@ import LightFooter from '../components/LightFooter'
 
 
 export default function EAOffice() {
-    document.title = "EA Office Team"
+    document.title = "EA Office"
     
   return (
 

@@ -1,12 +1,12 @@
 import '../App.css';
 import OnThisPage from '../components/OnThisPage';
-import P2ADoc from '../docs/P2ADoc';
-import * as OnThisPageConstants from '../components/OnThisPageConstants'
+import * as OnThisPageConstants from '../components/OnThisPageConstants';
+import SoftwareTypeToolDoc from '../docs/SoftwareTypeToolDoc';
 import LightFooter from '../components/LightFooter';
 
 
-export default function P2A() {
-    document.title = "P2A"
+export default function SoftwareTypeTool() {
+    document.title = "Software Type"
     
   return (
 
@@ -16,7 +16,7 @@ export default function P2A() {
             <div className="maindoc flex flex-col overflow-scroll " >
                 
                 <div className="h-5/6">
-                    <P2ADoc/>
+                    <SoftwareTypeToolDoc/>
                 </div>
                 <div className="h-1/6">
                     <LightFooter />
@@ -28,7 +28,7 @@ export default function P2A() {
         <div className="w-1/5">
 
             <div className="mainonthispage">
-                <OnThisPage resourceName={OnThisPageConstants.P2A}/>
+                <OnThisPage resourceName={OnThisPageConstants.SOFTWARE_TYPE_TOOL}/>
             </div>
 
         </div> 

@@ -2,124 +2,171 @@ export const json = {
     "pages": [
      {
       "name": "page1",
+      "clearInvisibleValues": "onHidden",
       "elements": [
-       {
-        "type": "rating",
-        "name": "nps_score",
-        "title": "On a scale of zero to ten, how likely are you to recommend our product to a friend or colleague?",
+      {
+        "type": "radiogroup",
+        "name": "solution_or_component",
+        "title": "Is this an Application or an IT component",
         "isRequired": true,
-        "rateMin": 0,
-        "rateMax": 10,
-        "minRateDescription": "(Most unlikely)",
-        "maxRateDescription": "(Most likely)"
-       },
-       {
-        "type": "checkbox",
-        "name": "promoter_features",
-        "visibleIf": "{nps_score} >= 9",
-        "title": "Which features do you value the most?",
-        "isRequired": true,
-        "validators": [
-         {
-          "type": "answercount",
-          "text": "Please select two features maximum.",
-          "maxCount": 2
-         }
-        ],
-        "hasOther": true,
         "choices": [
-         "Performance",
-         "Stability",
-         "User Interface",
-         "Complete Functionality"
-        ],
-        "otherText": "Other feature:",
-        "colCount": 2
-       },
-       {
-        "type": "comment",
-        "name": "passive_experience",
-        "visibleIf": "{nps_score} > 6  and {nps_score} < 9",
-        "title": "What do you like about our product?"
-       },
-       {
-        "type": "comment",
-        "name": "disappointed_experience",
-        "visibleIf": "{nps_score} notempty",
-        "title": "What do you miss or find disappointing in your experience with our products?"
-       }
+            {
+                "value": "solution",
+                "text": "This is an application used by the end user in a business context"
+            }, {
+                "value": "itComponent",
+                "text": "This is technology (software or service) that end user Applications require to function"
+            }
+        ]
+      },
+      {
+        "type": "radiogroup",
+        "name": "solution_business_it_facing",
+        "visibleIf": "{solution_or_component} = solution",
+        "title": "Is the End User business or IT facing",
+        "isRequired": true,
+        "choices": [
+            {
+                "value": "businessFacing",
+                "text": "Business-facing:  Lines of business, external business customers, external business partners"
+            }, {
+                "value": "itFacing",
+                "text": "IT-facing:  Software delivery, operations, support, platform, and infrastructure teams"
+            }
+        ]
+      },
+      {
+        "type": "radiogroup",
+        "name": "solution_business_facing",
+        "visibleIf": "{solution_business_it_facing} = businessfacing",
+        "title": "What is the type of this business-facing solution",
+        "isRequired": true,
+        "choices": [
+            {
+                "value": "businessSolution",
+                "text": "Business solution:  Enable product and external customer focused business capabilities"
+            }, {
+                "value": "sharedSolution",
+                "text": "Shared and corporate solution:  Core operating capabilities of Allstate"
+            }, {
+              "value": "workplaceSolution",
+              "text": "Workplace solution:  Workforce enablement"
+          }
+        ]
+      },
+      {
+        "type": "dropdown",
+        "name": "business_solution_dropdown",
+        "visibleIf": "{solution_business_facing} = businessSolution",
+        "title": "Select the Application category",
+        "isRequired": true,
+        "colCount": 0,
+        "choices": [
+            "Product Management",
+            "Sales and Marketing",
+            "Manufacturing and Delivery",
+            "Customer Service",
+        ]
+    },
+  
+      
+
+      {
+        "type": "rating",
+        "name": "recommend friends",
+        "visibleIf": "{solution_or_component} = never",
+        "title": "How likely are you to recommend the Product to a friend or co-worker?",
+        "mininumRateDescription": "Will not recommend",
+        "maximumRateDescription": "I will recommend"
+      },
+
       ]
-     }
-    ],
-    "showQuestionNumbers": "off"
-   }
-   ;
-   
-   export const json2 = {
-    "completedHtml": "<h3>Thank you for your feedback.</h3> <h5>Your thoughts and ideas will help us to create a great product!</h5>",
-    "completedHtmlOnCondition": [
-     {
-      "expression": "{nps_score} > 8",
-      "html": "<h3>Thank you for your feedback.</h3> <h5>We glad that you love our product. Your ideas and suggestions will help us to make our product even better!</h5>"
      },
+
      {
-       "expression": "{nps_score} < 7",
-       "html": "<h3>Thank you for your feedback.</h3> <h5> We are glad that you share with us your ideas.We highly value all suggestions from our customers. We do our best to improve the product and reach your expectation.</h5><br/>"
-     }
-    ],
-    "pages": [
-     {
-      "name": "page1",
+      "name": "page2",
+      "clearInvisibleValues": "onHidden",
       "elements": [
-       {
-        "type": "rating",
-        "name": "nps_score",
-        "title": "On a scale of zero to ten, how likely are you to recommend our product to a friend or colleague?",
+      {
+        "type": "radiogroup",
+        "name": "solution_or_component",
+        "title": "Is this an Application or an IT component",
         "isRequired": true,
-        "rateMin": 0,
-        "rateMax": 10,
-        "minRateDescription": "(Most unlikely)",
-        "maxRateDescription": "(Most likely)"
-       },
-       {
-        "type": "checkbox",
-        "name": "promoter_features",
-        "visibleIf": "{nps_score} >= 9",
-        "title": "Which features do you value the most?",
-        "isRequired": true,
-        "validators": [
-         {
-          "type": "answercount",
-          "text": "Please select two features maximum.",
-          "maxCount": 2
-         }
-        ],
-        "hasOther": true,
         "choices": [
-         "Performance",
-         "Stability",
-         "User Interface",
-         "Complete Functionality"
-        ],
-        "otherText": "Other feature:",
-        "colCount": 2
-       },
-       {
-        "type": "comment",
-        "name": "passive_experience",
-        "visibleIf": "{nps_score} > 6  and {nps_score} < 9",
-        "title": "What do you like about our product?"
-       },
-       {
-        "type": "comment",
-        "name": "disappointed_experience",
-        "visibleIf": "{nps_score} notempty",
-        "title": "What do you miss or find disappointing in your experience with our products?"
-       }
+            {
+                "value": "solution",
+                "text": "This is an application used by the end user in a business context"
+            }, {
+                "value": "itComponent",
+                "text": "This is technology (software or service) that end user Applications require to function"
+            }
+        ]
+      },
+      {
+        "type": "radiogroup",
+        "name": "solution_business_it_facing",
+        "visibleIf": "{solution_or_component} = solution",
+        "title": "Is the End User business or IT facing",
+        "isRequired": true,
+        "choices": [
+            {
+                "value": "businessFacing",
+                "text": "Business-facing:  Lines of business, external business customers, external business partners"
+            }, {
+                "value": "itFacing",
+                "text": "IT-facing:  Software delivery, operations, support, platform, and infrastructure teams"
+            }
+        ]
+      },
+      {
+        "type": "radiogroup",
+        "name": "solution_business_facing",
+        "visibleIf": "{solution_business_it_facing} = businessfacing",
+        "title": "What is the type of this business-facing solution",
+        "isRequired": true,
+        "choices": [
+            {
+                "value": "businessSolution",
+                "text": "Business solution:  Enable product and external customer focused business capabilities"
+            }, {
+                "value": "sharedSolution",
+                "text": "Shared and corporate solution:  Core operating capabilities of Allstate"
+            }, {
+              "value": "workplaceSolution",
+              "text": "Workplace solution:  Workforce enablement"
+          }
+        ]
+      },
+      {
+        "type": "dropdown",
+        "name": "business_solution_dropdown",
+        "visibleIf": "{solution_business_facing} = businessSolution",
+        "title": "Select the Application category",
+        "isRequired": true,
+        "colCount": 0,
+        "choices": [
+            "Product Management",
+            "Sales and Marketing",
+            "Manufacturing and Delivery",
+            "Customer Service",
+        ]
+    },
+  
+      
+
+      {
+        "type": "rating",
+        "name": "recommend friends",
+        "visibleIf": "{solution_or_component} = never",
+        "title": "How likely are you to recommend the Product to a friend or co-worker?",
+        "mininumRateDescription": "Will not recommend",
+        "maximumRateDescription": "I will recommend"
+      },
+
       ]
      }
+
+
     ],
     "showQuestionNumbers": "off"
-   }
-   ;
-   
+   };

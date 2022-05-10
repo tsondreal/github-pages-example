@@ -55,15 +55,23 @@ const LightMenuBar = () => {
                     className="hover:text-sky-500 dark:hover:text-sky-400"
                     href="/docs/installation"
                     >
-                      Start
+                      Getting Started
                   </a>
                 </li>
+                <li>
+                  <a
+                    className="hover:text-sky-500 dark:hover:text-sky-400"
+                    href="/docs/installation"
+                    >
+                      Software Type
+                  </a>
+                </li>                
                 <li>
                   <a
                     href="https://tailwindui.com"
                     className="hover:text-sky-500 dark:hover:text-sky-400"
                     >
-                      Guide
+                      Manual
                     </a>
                 </li>
                 <li>
@@ -71,7 +79,7 @@ const LightMenuBar = () => {
                     className="hover:text-sky-500 dark:hover:text-sky-400"
                     href="/blog"
                     >
-                      Manual
+                      Guide
                     </a>
                 </li>
               </ul>

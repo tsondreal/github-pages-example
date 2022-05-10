@@ -1,6 +1,5 @@
 import { Outlet } from 'react-router-dom';
 import '../App.css';
-
 import TableOfContents from '../components/TableOfContents';
 import LightMenuBar from '../components/LightMenuBar';
 
@@ -40,35 +39,4 @@ function AppLayout() {
 }
 
 export default AppLayout;
-
-/*
-    <div id="app-layout" className="h-screen flex flex-col">
-
-        <div id="menu-bar" className="flex flex-none items-center justify-between flex-wrap">
-          <LightMenuBar/>
-        </div>
-
-        <div className="flex-row flex ">
-
-          <div className="w-1/5">
-            
-              <div className="maintoc">
-                <TableOfContents/>
-              </div>
-            
-          </div>
-
-          <div className="w-4/5">
-
-            <div className="">      
-                <Outlet />
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-*/
-
 

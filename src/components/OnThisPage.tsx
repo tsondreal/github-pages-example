@@ -1,11 +1,14 @@
 import { useState, useEffect } from 'react';
 import { emitCustomEvent } from 'react-custom-events';
-import * as OnThisPageConstants from '../components/OnThisPageConstants'
+import { useCustomEventListener } from 'react-custom-events';
+import * as OnThisPageConstants from '../components/OnThisPageConstants';
+import * as CustomEventConstants from '../components/CustomEventConstants';
 import { test } from '../resources/onthispage-test';
 import { P2A } from '../resources/onthispage';
 import { GETSTARTED } from '../resources/onthispage';
 import { EAOFFICE } from '../resources/onthispage';
-
+import { SOFTWARETYPETOOL } from '../resources/onthispage';
+import { SOFTWARETAXONOMY } from '../resources/onthispage';
 
 interface IOnThisPage {
         resourceName: string;
@@ -15,6 +18,7 @@ export default function OnThisPage(props: IOnThisPage) {
 
         const [resourceName, setResourceName] = useState(props.resourceName);
         const [alignedArr, setAlignedArr] = useState<any>([]);
+        const [swTypeLoc, setSWTypeLoc] = useState<unknown>("none");
 
         useEffect(() => {
                 switch (resourceName) {
@@ -26,6 +30,12 @@ export default function OnThisPage(props: IOnThisPage) {
                                 break;
                         case OnThisPageConstants.EA_OFFICE:
                                 setAlignedArr(EAOFFICE);
+                                break;
+                        case OnThisPageConstants.SOFTWARE_TYPE_TOOL:
+                                setAlignedArr(SOFTWARETYPETOOL);
+                                break;
+                        case OnThisPageConstants.SOFTWARE_TAXONOMY:
+                                setAlignedArr(SOFTWARETAXONOMY);
                                 break;
                         default:
                                 setAlignedArr(test);
@@ -39,10 +49,19 @@ export default function OnThisPage(props: IOnThisPage) {
                 console.log(event.currentTarget.id);
                 if (event.currentTarget.id !== "#") {
                         console.log("OnThisPage - anchorTagSelection - ready to emit custom event " + event.currentTarget.id );
-                        emitCustomEvent('on-this-page-tab-event', event.currentTarget.id);
+                        emitCustomEvent(CustomEventConstants.ON_THIS_PAGE_TAB_EVENT, event.currentTarget.id);
                 }
 
         }
+
+        /*
+             Listen for SoftwareType Survey events and adjust progress based on survey part
+        */
+        useCustomEventListener(CustomEventConstants.SOFTWARE_TYPE_SURVEY_EVENT, data => {
+                console.log("OnThisPage - useCustomEventListener - " + data);
+                setSWTypeLoc(data);
+
+        });
 
   return (
         <div className="pt-10 hidden md:block fixed h-screen px-3">
@@ -57,7 +76,7 @@ export default function OnThisPage(props: IOnThisPage) {
                             </a>  
                             {item.level2arr.map((c:any, i:number) => (
                                 <div className="ml-4" key={i}>
-                                        <a href={c.href} onClick={anchorTagSelection} id={c.tabid} className="group flex items-start py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300">
+                                        <a href={c.href} onClick={anchorTagSelection} id={c.tabid} className={c.level2 === swTypeLoc ? "group flex items-start py-1 text-sky-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300" : "group flex items-start py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"}>
                                                 <svg
                                                 width="3" height="24" viewBox="0 -9 3 24"
                                                 className="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500">
@@ -79,3 +98,15 @@ export default function OnThisPage(props: IOnThisPage) {
         </div>   
   )
 }
+
+/*
+                                        <a href={c.href} onClick={anchorTagSelection} id={c.tabid} className="group flex items-start py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300">
+                                                <svg
+                                                width="3" height="24" viewBox="0 -9 3 24"
+                                                className="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500">
+                                                <path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+                                                </path>
+                                                </svg>
+                                                {c.level2}
+                                        </a>
+*/
