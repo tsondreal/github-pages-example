@@ -28,9 +28,6 @@ https://www.npmjs.com/package/react-custom-events
 npm install survey-react-ui --save
 https://surveyjs.io/Documentation/Library?id=get-started-react
 
-//responsive modal image
-npm install react-modal-image
-https://www.npmjs.com/package/react-modal-image-responsive
 
 //VSCode Extensions
 Prettify JSON
