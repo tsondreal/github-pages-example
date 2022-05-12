@@ -5,10 +5,8 @@ export default function TableOfContents() {
         const navigate = useNavigate();
 
         const tocClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-        
-                console.log("tocClick");
                 let tocName = event.currentTarget.id;
-                console.log("tocClick - tocName = " + tocName);
+                //console.log("tocClick - tocName = " + tocName);
                 switch (tocName) {
                         case "start":
                                 navigate("/");
@@ -60,9 +58,9 @@ export default function TableOfContents() {
                                 </a>
                                 </li>
                         <li><a className="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                                href="/docs/editor-setup">Evaluating and Experimenting with Software</a></li>
+                                href="">Evaluating and Experimenting with Software</a></li>
                         <li><a className="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                                href="/docs/using-with-preprocessors">Managing the Lifecycle of Purchased Software</a></li>
+                                href="">Managing the Lifecycle of Purchased Software</a></li>
                         </ul>
                 </li>
 
@@ -103,11 +101,11 @@ export default function TableOfContents() {
                 
                         <ul className="space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-800">
                         <li><a className="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                                href="/docs/utility-first">What Software is Applicable</a></li>
+                                href="">What Software is Applicable</a></li>
                         <li><a className="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                                href="/docs/hover-focus-and-other-states">Pre-Requisites</a></li>
+                                href="">Pre-Requisites</a></li>
                         <li><a className="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                                href="/docs/responsive-design">Use Cases and Scenarios</a></li>
+                                href="">Use Cases and Scenarios</a></li>
                         </ul>
                 </li>
                 <li className="mt-12 lg:mt-8">
@@ -122,15 +120,15 @@ export default function TableOfContents() {
                         </a>
                         <ul className="space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-800">
                         <li><a className="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                                href="/docs/configuration">Introduction to GetTech</a></li>
+                                href="">Introduction to GetTech</a></li>
                         <li><a className="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                                href="/docs/content-configuration">What is GetTech</a></li>
+                                href="">What is GetTech</a></li>
                         <li><a className="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                                href="/docs/theme">Why Do You Need GetTech</a></li>
+                                href="">Why Do You Need GetTech</a></li>
                         <li><a className="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                                href="/docs/screens">Key Terms</a></li>
+                                href="">Key Terms</a></li>
                         <li><a className="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
-                                href="/docs/customizing-colors">The Importance to Allstate</a></li>
+                                href="">The Importance to Allstate</a></li>
                         </ul>
                 </li>
                 </ul>

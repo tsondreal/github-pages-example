@@ -17,9 +17,9 @@ const LightMenuBar = () => {
           <div className="text-slate-900 text-lg tracking-tight font-bold dark:text-slate-200" >
             GetTech
           </div>
-          <a className="ml-3 text-xs leading-5 font-medium text-sky-600 dark:text-sky-400 bg-sky-400/10 rounded-full py-1 px-3 hidden md:flex items-center hover:bg-sky-400/20"
-            href="/">
-            <strong className="font-semibold">GetTech v1.0</strong>
+          <Link className="ml-8 text-xs leading-5 font-medium text-green-600 dark:text-green-400 bg-green-400/10 rounded-full py-1 px-3 hidden md:flex items-center hover:bg-green-400/20"
+            to=".">
+            <strong className="font-semibold">Software Governance</strong>
             <svg
               width="2"
               height="2"
@@ -28,7 +28,7 @@ const LightMenuBar = () => {
               className="ml-2 text-sky-600 dark:text-sky-400/70">
               <circle cx="1" cy="1" r="1"></circle></svg>
               <span className="ml-2">
-                Just-in-Time all the time, colored shadows
+                A simple, centralized place to <b>Get</b> enabling tech capabilities
               </span>
               <svg
               width="3"
@@ -46,41 +46,41 @@ const LightMenuBar = () => {
               >
               </path>
               </svg>
-          </a>
+          </Link>
           <div className="relative sm:flex items-center ml-auto">
             <nav className="text-sm leading-6 font-semibold text-slate-700 dark:text-slate-200 mr-8">
               <ul className="flex space-x-8">
                 <li>
-                  <a
+                  <Link
                     className="hover:text-sky-500 dark:hover:text-sky-400"
-                    href="/docs/installation"
+                    to="start"
                     >
                       Getting Started
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className="hover:text-sky-500 dark:hover:text-sky-400"
-                    href="/docs/installation"
+                    to="swtypetool"
                     >
                       Software Type
-                  </a>
+                  </Link>
                 </li>                
                 <li>
-                  <a
-                    href="https://tailwindui.com"
+                  <Link
+                    to="manual"
                     className="hover:text-sky-500 dark:hover:text-sky-400"
                     >
                       Manual
-                    </a>
+                    </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className="hover:text-sky-500 dark:hover:text-sky-400"
-                    href="/blog"
+                    to="guide"
                     >
                       Guide
-                    </a>
+                    </Link>
                 </li>
               </ul>
             </nav>

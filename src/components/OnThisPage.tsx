@@ -3,12 +3,13 @@ import { emitCustomEvent } from 'react-custom-events';
 import { useCustomEventListener } from 'react-custom-events';
 import * as OnThisPageConstants from '../components/OnThisPageConstants';
 import * as CustomEventConstants from '../components/CustomEventConstants';
-import { test } from '../resources/onthispage-test';
 import { P2A } from '../resources/onthispage';
 import { GETSTARTED } from '../resources/onthispage';
 import { EAOFFICE } from '../resources/onthispage';
 import { SOFTWARETYPETOOL } from '../resources/onthispage';
 import { SOFTWARETAXONOMY } from '../resources/onthispage';
+import { SERVICEGUIDE } from '../resources/onthispage';
+import { SERVICEMANUAL } from '../resources/onthispage';
 
 interface IOnThisPage {
         resourceName: string;
@@ -37,7 +38,13 @@ export default function OnThisPage(props: IOnThisPage) {
                         case OnThisPageConstants.SOFTWARE_TAXONOMY:
                                 setAlignedArr(SOFTWARETAXONOMY);
                                 break;
-                        default:
+                        case OnThisPageConstants.SERVICE_MANUAL:
+                                setAlignedArr(SERVICEMANUAL);
+                                break;
+                        case OnThisPageConstants.SERVICE_GUIDE:
+                                setAlignedArr(SERVICEGUIDE);
+                                break;
+                                default:
                                 setAlignedArr(test);
                                 break;
                 }
@@ -45,10 +52,9 @@ export default function OnThisPage(props: IOnThisPage) {
 
         //let c_event = new CustomEvent("something", {detail: 3})
         const anchorTagSelection = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-                console.log("OnThisPage - anchorTagSelection - event.currentTarget.id = " + event.currentTarget.id );
-                console.log(event.currentTarget.id);
+                //console.log("OnThisPage - anchorTagSelection - event.currentTarget.id = " + event.currentTarget.id );
                 if (event.currentTarget.id !== "#") {
-                        console.log("OnThisPage - anchorTagSelection - ready to emit custom event " + event.currentTarget.id );
+                        //console.log("OnThisPage - anchorTagSelection - ready to emit custom event " + event.currentTarget.id );
                         emitCustomEvent(CustomEventConstants.ON_THIS_PAGE_TAB_EVENT, event.currentTarget.id);
                 }
 
@@ -63,6 +69,13 @@ export default function OnThisPage(props: IOnThisPage) {
 
         });
 
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+                console.log("OnThisPage - topFunction");
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }       
+
   return (
         <div className="pt-10 hidden md:block fixed h-screen px-3">
         <h5 className="text-slate-900 font-semibold mb-4 text-sm leading-6 dark:text-slate-100">On this page</h5>
@@ -71,7 +84,7 @@ export default function OnThisPage(props: IOnThisPage) {
                     
                     alignedArr.map((item:any, index:number) => (
                     <li key={index}>
-                            <a href={item.href} className="block py-1 font-medium hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300">
+                            <a href={item.href} onClick={topFunction} className="block py-1 font-medium hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300">
                             {item.level1}
                             </a>  
                             {item.level2arr.map((c:any, i:number) => (

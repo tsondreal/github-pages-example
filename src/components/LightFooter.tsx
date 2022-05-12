@@ -7,10 +7,8 @@ export default function LightFooter() {
     const navigate = useNavigate();
 
     const tocClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-        
-        console.log("LightFooter - tocClick");
         let tocName = event.currentTarget.id;
-        console.log("LightFooter - tocClick - tocName = " + tocName);
+        //console.log("LightFooter - tocClick - tocName = " + tocName);
         switch (tocName) {
                 case "eaoffice":
                         navigate("/eaoffice");

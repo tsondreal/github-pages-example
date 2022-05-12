@@ -8,3 +8,5 @@ export const SERVICE_GUIDE: string = 'SERVICE_GUIDE';
 export const SERVICE_MANUAL: string = 'SERVICE_MANUAL';
 
 export const EA_OFFICE: string = 'EA_OFFICE';
+
+export const TABS_TEMPLATE: string = 'TABS_TEMPLATE';

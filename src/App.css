@@ -45,12 +45,7 @@ a:hover {
   border-right-width: 1px;
 }
 
-.maintoc {
-  
-}
-
-.mainonthispage {
-  
-}
-
+.clickable-image:hover {
+  cursor:pointer;
+ }
 

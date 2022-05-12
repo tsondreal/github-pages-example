@@ -1,23 +1,17 @@
 import React, { useState } from 'react';
-import '../App.css';
 import { Outlet, useNavigate } from 'react-router-dom';
-import { useCustomEventListener, emitCustomEvent } from 'react-custom-events';
+import { useCustomEventListener } from 'react-custom-events';
 import * as CustomEventConstants from '../components/CustomEventConstants';
-import mainflowimg from '../assets/images/getstarted-mainflow.png';
-//import mainflowimg from '../assets/images/test1.png';
 
-import PictureModal from '../components/PictureModal';
-
-export default function GettingStartedDoc() {
+export default function TemplateTabsDoc() {
 
     const navigate = useNavigate();
-    const [currentTab, setCurrentTab] = useState("problem-statement");
+    const [currentTab, setCurrentTab] = useState("tsa");
 
 
     const tabClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-        //console.log("GettingStartedDoc - tabClick - " + event.currentTarget.id);
+        setCurrentTab(event.currentTarget.id);
         let navid: string = event.currentTarget.id;
-        setCurrentTab(navid);
         navigate(navid);
     }
 
@@ -28,97 +22,74 @@ export default function GettingStartedDoc() {
         navigate(targetID)
     });
 
-    const onModalClick = (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
-        //console.log("GettingStartedDoc - onModalClick - event.currentTarget.id = " + event.currentTarget.id );
-        if (event.currentTarget.id === "clickable-image") {
-                //console.log("GettingStartedDoc - onModalClick - ready to emit custom event " + event.currentTarget.id );
-                emitCustomEvent(CustomEventConstants.PICTURE_MODAL_EVENT, event.currentTarget.id);
-        }
-    }    
-
   return (
 
 
 <main className="max-w-3xl mx-auto pt-8 xl:max-w-none pr-6 pl-4 overflow-scroll w-full">
-    <header className="mb-10 md:flex md:items-start">
+    <header id="header" className="mb-10 md:flex md:items-start">
         <div className="flex-auto max-w-4xl">
 
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight dark:text-slate-200">
+            <h1 id="get-started" className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight dark:text-slate-200">
                 Get Started
             </h1>
             <p className="mt-4 text-lg text-slate-700 dark:text-slate-400">
-            If you are looking for a vended software solution to solve a particular business or IT related problem, and whether you already have something in mind or are at the beginning or middle stages of the solutioning process, the basic path, illustrated in the following picture, is recommended as a good place to start.
+            If you are looking for a vended software solution to solve a particular business or IT related problem, and whether you already have something in mind or are at the beginning stages of the process, the following steps are recommended:
             </p>
 
         </div>
     </header>
-
-    <div className="relative z-10">
-        <img id="clickable-image" className="clickable-image" onClick={onModalClick} src={mainflowimg}  />
-        <PictureModal imageName={mainflowimg}/>
-    </div>
-    
-    <div id="starting-path" className="pt-16" />
-
     <div className="mb-16">
-
         <div className="relative z-10">
-            <h2 data-docsearch-ignore="true" className="text-slate-900 text-xl tracking-tight font-bold mb-3 dark:text-slate-200">
-                Basic Starting Path
+            <h2 data-docsearch-ignore="true" id="conditions" className="text-slate-900 text-xl tracking-tight font-bold mb-3 dark:text-slate-200">
+                Recommended Steps
             </h2>
             <ul className="list-disc list-inside mt-4 text-slate-700 dark:text-slate-400 marker:text-slate-500">
-                <li>Review the <b>problem statement</b> with your DCIO, Architect, and BISO</li>
-                <li>Determine new and existing <b>solution options</b> with your DCIO, Architect, and BISO</li>
-                <li>Determine the <b>most appropriate solution</b> with your Architect, Software Asset Management, SPS</li>
-                <li>Work with SPS on an RFI/RFP</li>
+                <li>Start with your DCIO, Architect, and BISO</li>
+                <li>Software Type and Value Stream Mapping</li>
+                <li>Application Portfolio Management (APM) practices</li>
+                <li>External Data standards</li>
+                <li>Privacy and compliance standards</li>
+                <li>Information security standards</li>
             </ul>   
-
-            <div id="tab-placer" className="invisible">tab-placer invisible </div>
 
             <div className="flex overflow-auto mb-6 mt-6 -mx-4 sm:-mx-6">
                 <div className="flex-none min-w-full px-4 sm:px-6">
                     <ul className="border-b border-slate-200 space-x-6 flex whitespace-nowrap dark:border-slate-200/5">
                         <li>
                             <h2>
-                                <a className = {currentTab === "problem-statement" ? "flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-sky-500 border-current" : "flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-slate-900 border-transparent hover:border-slate-300 dark:text-slate-200 dark:hover:border-slate-700"} 
-                                    id="problem-statement"
+                                <a className = {currentTab === "tsa" ? "flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-sky-500 border-current" : "flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-slate-900 border-transparent hover:border-slate-300 dark:text-slate-200 dark:hover:border-slate-700"} 
+                                    id="tsa"
                                     onClick={ tabClick }
-                                    href="#tab-placer"
                                     >
-                                        Problem Statement
+                                    Target State Architecture (TSA)
                                 </a>
                             </h2>
                         </li>
                         <li>
                             <h2>
-                            <a className = {currentTab === "solution-options" ? "flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-sky-500 border-current" : "flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-slate-900 border-transparent hover:border-slate-300 dark:text-slate-200 dark:hover:border-slate-700"} 
-                                    id="solution-options"
+                            <a className = {currentTab === "apprat" ? "flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-sky-500 border-current" : "flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-slate-900 border-transparent hover:border-slate-300 dark:text-slate-200 dark:hover:border-slate-700"} 
+                                    id="apprat"
                                     onClick={ tabClick }
-                                    href="#tab-placer"
-                                    >
-                                        Solution Options
+                                    >Application Rationalization
                                 </a>
                             </h2>
                         </li>
                         <li>
                             <h2>
-                            <a className = {currentTab === "solution" ? "flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-sky-500 border-current" : "flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-slate-900 border-transparent hover:border-slate-300 dark:text-slate-200 dark:hover:border-slate-700"} 
-                                    id="solution"
-                                    onClick={tabClick} 
-                                    href="#tab-placer"                                   
-                                    >
-                                        Solution
+                            <a className = {currentTab === "ARP" ? "flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-sky-500 border-current" : "flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-slate-900 border-transparent hover:border-slate-300 dark:text-slate-200 dark:hover:border-slate-700"} 
+                                    id="ARP"
+                                    onClick={tabClick}                                    
+                                    href="/docs/installation/framework-guides">Asset Risk Profile
                                 </a>
                             </h2>
                         </li>
                         <li>
                             <h2>
-                            <a className = {currentTab === "rfx" ? "flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-sky-500 border-current" : "flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-slate-900 border-transparent hover:border-slate-300 dark:text-slate-200 dark:hover:border-slate-700"} 
-                                    id="rfx"
-                                    onClick={tabClick}
-                                    href="#tab-placer"                                    
-                                    >
-                                        RFI/RFP
+                            <a className = {currentTab === "SAAS" ? "flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-sky-500 border-current" : "flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-slate-900 border-transparent hover:border-slate-300 dark:text-slate-200 dark:hover:border-slate-700"} 
+                                    id="SAAS"
+                                    onClick={tabClick}                                    
+                                    href="/docs/installation/play-cdn">
+                                        SaaS
                                 </a>
                             </h2>
                         </li>
@@ -201,7 +172,9 @@ export default function GettingStartedDoc() {
 }
 
 /*
-width={728} height={425}
 
+                <div
+                    className="absolute -z-10 -inset-3 rounded-2xl bg-slate-50 dark:bg-slate-800/50 opacity-0 peer-hover:opacity-100 sm:-inset-4">
+                </div>
 
 */
