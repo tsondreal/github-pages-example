@@ -28,6 +28,10 @@ https://www.npmjs.com/package/react-custom-events
 npm install survey-react-ui --save
 https://surveyjs.io/Documentation/Library?id=get-started-react
 
+//React Tabs
+npm install --save react-tabs
+https://github.com/reactjs/react-tabs
+https://reactcommunity.org/react-tabs/
 
 //VSCode Extensions
 Prettify JSON
